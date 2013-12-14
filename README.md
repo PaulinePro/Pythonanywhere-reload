@@ -7,7 +7,7 @@ So I made a script to do all the works. And of course it's written in Python!!
 
 ## Usage ##
 1. Fill up the USERNAME and PASSWORD in reload.py.
-2. (https://raw.github.com/davidyen11244/Pythonanywhere-reload/master/docs/Aaaand-its-reloaded.jpg)
+2. ![reloaded](https://raw.github.com/davidyen11244/Pythonanywhere-reload/master/docs/Aaaand-its-reloaded.jpg)
 
 
 ## Requirements ##
