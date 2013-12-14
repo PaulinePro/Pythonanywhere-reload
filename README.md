@@ -1,4 +1,4 @@
-Reload the web app on Pythonanywhere
+Reload app on Pythonanywhere
 =================================
 
 Pythonanywhere is a good place to host your web app, and I like it very much.
