@@ -7,7 +7,7 @@ PASSWORD = ''
 reload_url = 'https://www.pythonanywhere.com/user/%s/webapps/%s.pythonanywhere.com/reload' % (USERNAME, USERNAME) 
 login_url = 'https://www.pythonanywhere.com/login/'
 
-headers = {'Referer': 'https://www.pythonanywhere.com/login/?next=/',
+headers = {'Referer': 'https://www.pythonanywhere.com/login',
            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36',
            'Host': 'www.pythonanywhere.com',
            'Origin': 'https://www.pythonanywhere.com'}
@@ -23,9 +23,10 @@ if response is not None:
         data = {'csrfmiddlewaretoken': csrf_token,
                 'username': USERNAME,
                 'password': PASSWORD,
-                'next': '/'}
-        session.post(login_url, data=data)
-        
+                'next': ''}
+        # Don't redirect here
+        session.post(login_url, data=data, allow_redirects=False)
+
         # Reload the web app
         response = session.post(reload_url)
         if response.status_code == 200:
